@@ -5,11 +5,11 @@ terraform {
       version = "~> 5.0"
     }
   }
-  required_version = ">= 1.3, < 1.6"
+  required_version = ">= 1.3, < 1.7"  # Updated to allow Terraform 1.6.x
 }
 
 provider "aws" {
-  region  = var.region
+  region = var.region
 }
 
 module "vpc" {
