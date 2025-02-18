@@ -27,7 +27,7 @@ jobs:
     - name: Set up Terraform
       uses: hashicorp/setup-terraform@v2
       with:
-        terraform_version: 1.6.0  # Use the latest stable version
+        terraform_version: 1.5.7  # Use the latest stable version
 
     - name: Set Account ID
       id: account
