@@ -5,7 +5,7 @@ terraform {
       version = "~> 5.0"
     }
   }
-  required_version = ">= 1.3, < 1.7"  # Updated to allow Terraform 1.6.x
+  required_version = ">= 1.3, < 1.7"
 }
 
 provider "aws" {
@@ -62,12 +62,12 @@ resource "null_resource" "sleep_after_modules" {
   }
 
   depends_on = [
-    module.vpc.vpc_id,
-    module.data_poisoning.api_invoke_url,
-    module.supply_chain.api_invoke_url,
-    module.output_integrity.api_invoke_url,
-    module.webserver.backend_url,
-    module.front.backend_url
+    module.vpc,
+    module.data_poisoning,
+    module.supply_chain,
+    module.output_integrity,
+    module.webserver,
+    module.front
   ]
 }
 
